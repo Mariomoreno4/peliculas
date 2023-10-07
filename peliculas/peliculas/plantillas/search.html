@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Libros</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+</head>
+<body>
+    <h1>Buscar Peliculas</h1>
+    <form method="GET" action="{% url 'listar_elementos' %}">
+        
+        <input type="text" name="buscar" placeholder="Buscar libros" value="{{ request.GET.buscar }}">
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+   
+
+    <h2>Resultados de la búsqueda:</h2>
+    <ul>
+        {% for libros in libro %}
+       
+            <li>{{ libros.autor }} -  {{ libros.nombrelibro }}</li>
+        {% empty %}
+            <li>No se encontraron resultados.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

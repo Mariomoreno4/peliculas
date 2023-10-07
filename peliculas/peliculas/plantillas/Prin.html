@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+
+    <style>
+        /* Estilos generales */
+        
+        body {
+            background-color: #333;
+            /* Fondo gris oscuro */
+            color: #fff;
+            /* Texto en color claro */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Estilos para el encabezado */
+        
+        header {
+            background-color: #222;
+            /* Fondo del encabezado más oscuro */
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            color: white;
+            /* Color azul para el título */
+        }
+        /* Estilos para la sección principal */
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h2 {
+            color: white;
+            /* Color azul para los títulos */
+        }
+        
+        p {
+            opacity: 0.9;
+            /* Opacidad reducida para el texto */
+        }
+        /* Estilos para los enlaces */
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            color: rgb(110, 104, 104);
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+            /* Transición suave para el color de fondo */
+        }
+        
+        .btn:hover {
+            background-color: black;
+            /* Cambio de color al pasar el cursor */
+        }
+        /* Estilos para el pie de página */
+        
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Películas Share</h1>
+    </header>
+
+    <div class="container">
+        <h2>Necesitas iniciar sesion</h2>
+        <p>Encuentra aquí las mejores películas.</p>
+        <a class="btn" href="{% url 'login' %}">Login</a>
+        <a class="btn" href="{% url 'register' %}">Register</a>
+        
+    </div>
+
+    <footer>
+        Mario Isai Moreno Duran 200936
+        Gerardo felix 201549
+        Fernando Ponce 222953
+    </footer>
+</body>
+
+</html>
